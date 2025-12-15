@@ -1,0 +1,46 @@
+/* all numbers in arial */
+.number{
+ font-family: Arial;
+ font-weight: bold;
+ color: #B5B5B5;
+ mix-blend-mode: multiply;
+}
+.number:hover,
+.number--active{
+ color: #3C2570;
+}
+
+/* all text in helvetica */
+.blue-text{
+ font-family: Helvetica;
+ font-weight: bold;
+ color: #1E4BE0;
+ mix-blend-mode: multiply;
+}
+.grey-blue-text{
+ font-family: Helvetica;
+ font-weight: bold;
+ color: #B5B5B5;
+ mix-blend-mode: multiply;
+}
+.grey-blue-text--active{
+ color: #1E4BE0;
+}
+
+.gold-text{
+ font-family: Helvetica;
+ font-weight: bold;
+ color: #8E7700;
+ mix-blend-mode: multiply;
+}
+.grey-gold-text{
+ font-family: Helvetica;
+ font-weight: bold;
+ color: #B5B5B5;
+ mix-blend-mode: multiply;
+}
+.grey-gold-text--active{
+ color: #8E7700;
+}
+
+
