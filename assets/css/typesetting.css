@@ -1,12 +1,13 @@
 /* all numbers in arial */
-.number{
+.key--number{
  font-family: Arial;
  font-weight: bold;
  color: #B5B5B5;
  mix-blend-mode: multiply;
+ font-size: 3em;
 }
-.number:hover,
-.number--active{
+.key--number:hover,
+.key--number--active{
  color: #3C2570;
 }
 
@@ -16,14 +17,16 @@
  font-weight: bold;
  color: #1E4BE0;
  mix-blend-mode: multiply;
+ font-size: 3em;
 }
-.grey-blue-text{
+.key--letter{
  font-family: Helvetica;
  font-weight: bold;
  color: #B5B5B5;
  mix-blend-mode: multiply;
+ font-size: 3em;
 }
-.grey-blue-text--active{
+.key--letter--active{
  color: #1E4BE0;
 }
 
@@ -32,15 +35,23 @@
  font-weight: bold;
  color: #8E7700;
  mix-blend-mode: multiply;
+ font-size: 3em;
 }
 .grey-gold-text{
  font-family: Helvetica;
  font-weight: bold;
  color: #B5B5B5;
  mix-blend-mode: multiply;
+ font-size: 3em;
 }
 .grey-gold-text--active{
  color: #8E7700;
 }
+button{
+ 
+ mix-blend-mode: multiply;
+ font-size: 3em;
 
+ color: #8E7700;
+}
 

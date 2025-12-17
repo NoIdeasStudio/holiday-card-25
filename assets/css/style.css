@@ -1,0 +1,51 @@
+body,html{
+ background-color: F9F9F9;
+}
+.key--letter-number{
+ position: relative;  /* positioning context for children */
+  display: inline-block;
+  width: 3em;          /* adjust as needed */
+  height: 3em;
+ 
+}
+.key--letters{
+ position: absolute;
+}
+.key--letter{
+ position: absolute;  /* this is the key fix */
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ z-index: 2;
+}
+.key--number{
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ z-index: 1;
+}
+.hidden {
+ opacity: 0;
+}
+.key--row-1{
+ display: flex;
+ gap: .5em;
+ height: fit-content;
+ justify-content: space-evenly;
+ width: 100%;
+ gap: em;
+ position: relative;
+ margin-top: .5em;
+}
+#key{
+ margin: 1em;
+}

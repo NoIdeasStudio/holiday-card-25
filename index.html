@@ -4,16 +4,463 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Perfect Pangram</title>
- <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" href="animations.css">
- <link rel="stylesheet" href="reset.css">
- <link rel="stylesheet" href="typesetting.css">
+ <link rel="stylesheet" href="./assets/css/typesetting.css">
+ <link rel="stylesheet" href="./assets/css/style.css">
+ <link rel="stylesheet" href="./assets/css/reset.css">
+ <link rel="stylesheet" href="./assets/css/animations.css">
 </head>
 <body>
 
- <!-- numbers overlay -->
- <!-- letters -->
+ <section id="key">
+
+   <div class="key--row-1">
+<!-- Aa 1 -->
+    <div id="Aa1" class="key--letter-number"><p id="1" class="key--number">1</p>
+     <p id="Aa1-1" class="key--letter"><span class="U">A</span> <span class="L">a</span></p>
+    </div>
+<!-- Bb 2 -->
+    <div id="Bb2" class="key--letter-number"><p id="2" class="key--number">2</p>
+     <p id="Aa1-2" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+     <p id="Bb2-1" class="key--letter"><span class="U">B</span> <span class="L">b</span></p>
+    </div>
+<!-- Cc 3 -->
+    <div id="Cc3" class="key--letter-number"><p id="3" class="key--number">3</p>
+     <p id="Aa1-3" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+     <p id="Bb2-2" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+     <p id="Cc3-1" class="key--letter"><span class="U">C</span> <span class="L">c</span></p>
+    </div>
+<!-- Dd 4 -->
+   <div id="Dd4" class="key--letter-number"><p id="4" class="key--number">4</p>
+    <p id="Aa1-4" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-3" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-2" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-1" class="key--letter"><span class="U">D</span> <span class="L">d</span></p>
+   </div>
+<!-- Ee 5 -->
+   <div id="Ee5" class="key--letter-number"><p id="5" class="key--number">5</p>
+   <p id="Aa1-5" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-4" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-3" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-2" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-1" class="key--letter"><span class="U">E</span> <span class="L">e</span></p>
+   </div>
+<!-- Ff 6 -->
+   <div id="Ff6" class="key--letter-number"><p id="6" class="key--number">6</p>
+    <p id="Aa1-6" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-5" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-4" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-3" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-2" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+    <p id="Ff6-1" class="key--letter"><span class="U">F</span> <span class="L">f</span></p>
+   </div>
+<!-- Gg 7 -->
+   <div id="Gg7" class="key--letter-number"><p id="7" class="key--number">7</p>
+    <p id="Aa1-7" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-6" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-5" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-4" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-3" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+    <p id="Ff6-2" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+    <p id="Gg7-1" class="key--letter"><span class="U">G</span> <span class="L">g</span></p>
+   </div>
+<!-- Hh 8 -->
+   <div id="Hh8" class="key--letter-number"><p id="8" class="key--number">8</p>
+    <p id="Aa1-8" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-7" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-6" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-5" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-4" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+    <p id="Ff6-3" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+    <p id="Gg7-2" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+    <p id="Hh8-1" class="key--letter"><span class="U">H</span> <span class="L">h</span></p>
+   </div>
+<!-- Ii 9 -->
+   <div id="Ii9" class="key--letter-number"><p id="9" class="key--number">9</p>
+    <p id="Aa1-9" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-8" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-7" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-6" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-5" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+    <p id="Ff6-4" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+    <p id="Gg7-3" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+    <p id="Hh8-2" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+    <p id="Ii9-1" class="key--letter"><span class="U">I</span> <span class="L">i</span></p>
+   </div>
+<!-- Jj 10 -->
+   <div id="Jj10" class="key--letter-number"><p id="10" class="key--number">10</p>
+    <p id="Aa1-10" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-9" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-8" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-7" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-6" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+    <p id="Ff6-5" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+    <p id="Gg7-4" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+    <p id="Hh8-3" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+    <p id="Ii9-2" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+    <p id="Jj10-1" class="key--letter"><span class="U">J</span> <span class="L">j</span></p>
+   </div>
+<!-- Kk 11 -->
+   <div id="Kk11" class="key--letter-number"><p id="11" class="key--number">11</p>
+    <p id="Aa1-11" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-10" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-9" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-8" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-7" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+    <p id="Ff6-6" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+    <p id="Gg7-5" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+    <p id="Hh8-4" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+    <p id="Ii9-3" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+    <p id="Jj10-2" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+    <p id="Kk11-1" class="key--letter"><span class="U">K</span> <span class="L">k</span></p>
+   </div>
+<!-- Ll 12 -->
+   <div id="Ll12" class="key--letter-number"><p id="12" class="key--number">12</p>
+    <p id="Aa1-12" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-11" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-10" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-9" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-8" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+    <p id="Ff6-7" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+    <p id="Gg7-6" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+    <p id="Hh8-5" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+    <p id="Ii9-4" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+    <p id="Jj10-3" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+    <p id="Kk11-2" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+    <p id="Ll12-1" class="key--letter"><span class="U">L</span> <span class="L">l</span></p>
+   </div>
+<!-- Mm 13 -->
+   <div id="Mm13" class="key--letter-number">
+    <p id="13" class="key--number">13</p>
+    <p id="Aa1-13" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+    <p id="Bb2-12" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+    <p id="Cc3-11" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+    <p id="Dd4-10" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+    <p id="Ee5-9" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+    <p id="Ff6-8" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+    <p id="Gg7-7" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+    <p id="Hh8-6" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+    <p id="Ii9-5" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+    <p id="Jj10-4" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+    <p id="Kk11-3" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+    <p id="Ll12-2" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+    <p id="Mm13-1" class="key--letter"><span class="U">M</span> <span class="L">m</span></p>
+   </div>
+
+  </div>
+
+  <div class="key--row-1">
+
+<!-- Nn 14 -->
+<div id="Nn14" class="key--letter-number"><p id="14" class="key--number">14</p>
+ <p id="Aa1-14" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-13" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-12" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-11" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-10" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-9" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-8" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-7" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-6" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-5" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-4" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-3" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-2" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-1" class="key--letter"><span class="U">N</span> <span class="L">n</span></p>
+</div>
+<!-- Oo 15 -->
+<div id="Oo15" class="key--letter-number"><p id="15" class="key--number">15</p>
+ <p id="Aa1-15" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-14" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-13" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-12" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-11" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-10" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-9" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-8" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-7" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-6" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-5" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-4" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-3" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-2" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-1" class="key--letter"><span class="U">O</span> <span class="L">o</span></p>
+</div>
+<!-- Pp 16 -->
+<div id="Pp16" class="key--letter-number"><p id="16" class="key--number">16</p>
+ <p id="Aa1-16" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-15" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-14" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-13" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-12" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-11" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-10" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-9" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-8" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-7" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-6" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-5" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-4" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-3" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-2" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-1" class="key--letter"><span class="U">P</span> <span class="L">p</span></p>
+</div>
+<!-- Qq 17 -->
+<div id="Qq17" class="key--letter-number"><p id="17" class="key--number">17</p>
+ <p id="Aa1-17" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-16" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-15" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-14" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-13" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-12" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-11" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-10" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-9" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-8" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-7" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-6" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-5" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-4" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-3" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-2" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-1" class="key--letter"><span class="U">Q</span> <span class="L">q</span></p>
+</div>
+<!-- Rr 18 -->
+<div id="Rr18" class="key--letter-number"><p id="18" class="key--number">18</p>
+ <p id="Aa1-18" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-17" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-16" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-15" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-14" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-13" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-12" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-11" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-10" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-9" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-8" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-7" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-6" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-5" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-4" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-3" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-2" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-1" class="key--letter"><span class="U">R</span> <span class="L">r</span></p>
+</div>
+<!-- Ss 19 -->
+<div id="Ss19" class="key--letter-number"><p id="19" class="key--number">19</p>
+ <p id="Aa1-19" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-18" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-17" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-16" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-15" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-14" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-13" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-12" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-11" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-10" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-9" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-8" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-7" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-6" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-5" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-4" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-3" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-2" class="key--letter hidden"><span class="U">R</span> <span class="L">r</span></p>
+ <p id="Ss19-1" class="key--letter"><span class="U">S</span> <span class="L">s</span></p>
+</div>
+<!-- Tt 20 -->
+<div id="Tt20" class="key--letter-number"><p id="20" class="key--number">20</p>
+ <p id="Aa1-20" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-19" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-18" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-17" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-16" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-15" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-14" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-13" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-12" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-11" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-10" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-9" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-8" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-7" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-6" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-5" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-4" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-3" class="key--letter hidden"><span class="U">R</span> <span class="L">r</span></p>
+ <p id="Ss19-2" class="key--letter hidden"><span class="U">S</span> <span class="L">s</span></p>
+ <p id="Tt20-1" class="key--letter"><span class="U">T</span> <span class="L">t</span></p>
+</div>
+<!-- Uu 21 -->
+<div id="Uu21" class="key--letter-number"><p id="21" class="key--number">21</p>
+ <p id="Aa1-21" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-20" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-19" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-18" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-17" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-16" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-15" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-14" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-13" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-12" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-11" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-10" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-9" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-8" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-7" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-6" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-5" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-4" class="key--letter hidden"><span class="U">R</span> <span class="L">r</span></p>
+ <p id="Ss19-3" class="key--letter hidden"><span class="U">S</span> <span class="L">s</span></p>
+ <p id="Tt20-2" class="key--letter hidden"><span class="U">T</span> <span class="L">t</span></p>
+ <p id="Uu21-1" class="key--letter"><span class="U">U</span> <span class="L">u</span></p>
+</div>
+<!-- Vv 22 -->
+<div id="Vv22" class="key--letter-number"><p id="22" class="key--number">22</p>
+ <p id="Aa1-22" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-21" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-20" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-19" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-18" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-17" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-16" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-15" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-14" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-13" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-12" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-11" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-10" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-9" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-8" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-7" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-6" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-5" class="key--letter hidden"><span class="U">R</span> <span class="L">r</span></p>
+ <p id="Ss19-4" class="key--letter hidden"><span class="U">S</span> <span class="L">s</span></p>
+ <p id="Tt20-3" class="key--letter hidden"><span class="U">T</span> <span class="L">t</span></p>
+ <p id="Uu21-2" class="key--letter hidden"><span class="U">U</span> <span class="L">u</span></p>
+ <p id="Vv22-1" class="key--letter"><span class="U">V</span> <span class="L">v</span></p>
+</div>
+<!-- Ww 23 -->
+<div id="Ww23" class="key--letter-number"><p id="23" class="key--number">23</p>
+ <p id="Aa1-23" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-22" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-21" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-20" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-19" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-18" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-17" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-16" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-15" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-14" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-13" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-12" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-11" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-10" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-9" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-8" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-7" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-6" class="key--letter hidden"><span class="U">R</span> <span class="L">r</span></p>
+ <p id="Ss19-5" class="key--letter hidden"><span class="U">S</span> <span class="L">s</span></p>
+ <p id="Tt20-4" class="key--letter hidden"><span class="U">T</span> <span class="L">t</span></p>
+ <p id="Uu21-3" class="key--letter hidden"><span class="U">U</span> <span class="L">u</span></p>
+ <p id="Vv22-2" class="key--letter hidden"><span class="U">V</span> <span class="L">v</span></p>
+ <p id="Ww23-1" class="key--letter"><span class="U">W</span> <span class="L">w</span></p>
+</div>
+<!-- Xx 24 -->
+<div id="Xx24" class="key--letter-number"><p id="24" class="key--number">24</p>
+ <p id="Aa1-24" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-23" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-22" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-21" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-20" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-19" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-18" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-17" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-16" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-15" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-14" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-13" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-12" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-11" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-10" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-9" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-8" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-7" class="key--letter hidden"><span class="U">R</span> <span class="L">r</span></p>
+ <p id="Ss19-6" class="key--letter hidden"><span class="U">S</span> <span class="L">s</span></p>
+ <p id="Tt20-5" class="key--letter hidden"><span class="U">T</span> <span class="L">t</span></p>
+ <p id="Uu21-4" class="key--letter hidden"><span class="U">U</span> <span class="L">u</span></p>
+ <p id="Vv22-3" class="key--letter hidden"><span class="U">V</span> <span class="L">v</span></p>
+ <p id="Ww23-2" class="key--letter hidden"><span class="U">W</span> <span class="L">w</span></p>
+ <p id="Xx24-1" class="key--letter"><span class="U">X</span> <span class="L">x</span></p>
+</div>
+<!-- Yy 25 -->
+<div id="Yy25" class="key--letter-number"><p id="25" class="key--number">25</p>
+ <p id="Aa1-25" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-24" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-23" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-22" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-21" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-20" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-19" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-18" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-17" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-16" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-15" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-14" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-13" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-12" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-11" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-10" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-9" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-8" class="key--letter hidden"><span class="U">R</span> <span class="L">r</span></p>
+ <p id="Ss19-7" class="key--letter hidden"><span class="U">S</span> <span class="L">s</span></p>
+ <p id="Tt20-6" class="key--letter hidden"><span class="U">T</span> <span class="L">t</span></p>
+ <p id="Uu21-5" class="key--letter hidden"><span class="U">U</span> <span class="L">u</span></p>
+ <p id="Vv22-4" class="key--letter hidden"><span class="U">V</span> <span class="L">v</span></p>
+ <p id="Ww23-3" class="key--letter hidden"><span class="U">W</span> <span class="L">w</span></p>
+ <p id="Xx24-2" class="key--letter hidden"><span class="U">X</span> <span class="L">x</span></p>
+ <p id="Yy25-1" class="key--letter"><span class="U">Y</span> <span class="L">y</span></p>
+</div>
+<!-- Zz 26 -->
+<div id="Zz26" class="key--letter-number"><p id="26" class="key--number">26</p>
+ <p id="Aa1-26" class="key--letter hidden"><span class="U">A</span> <span class="L">a</span></p>
+ <p id="Bb2-25" class="key--letter hidden"><span class="U">B</span> <span class="L">b</span></p>
+ <p id="Cc3-24" class="key--letter hidden"><span class="U">C</span> <span class="L">c</span></p>
+ <p id="Dd4-23" class="key--letter hidden"><span class="U">D</span> <span class="L">d</span></p>
+ <p id="Ee5-22" class="key--letter hidden"><span class="U">E</span> <span class="L">e</span></p>
+ <p id="Ff6-21" class="key--letter hidden"><span class="U">F</span> <span class="L">f</span></p>
+ <p id="Gg7-20" class="key--letter hidden"><span class="U">G</span> <span class="L">g</span></p>
+ <p id="Hh8-19" class="key--letter hidden"><span class="U">H</span> <span class="L">h</span></p>
+ <p id="Ii9-18" class="key--letter hidden"><span class="U">I</span> <span class="L">i</span></p>
+ <p id="Jj10-17" class="key--letter hidden"><span class="U">J</span> <span class="L">j</span></p>
+ <p id="Kk11-16" class="key--letter hidden"><span class="U">K</span> <span class="L">k</span></p>
+ <p id="Ll12-15" class="key--letter hidden"><span class="U">L</span> <span class="L">l</span></p>
+ <p id="Mm13-14" class="key--letter hidden"><span class="U">M</span> <span class="L">m</span></p>
+ <p id="Nn14-13" class="key--letter hidden"><span class="U">N</span> <span class="L">n</span></p>
+ <p id="Oo15-12" class="key--letter hidden"><span class="U">O</span> <span class="L">o</span></p>
+ <p id="Pp16-11" class="key--letter hidden"><span class="U">P</span> <span class="L">p</span></p>
+ <p id="Qq17-10" class="key--letter hidden"><span class="U">Q</span> <span class="L">q</span></p>
+ <p id="Rr18-9" class="key--letter hidden"><span class="U">R</span> <span class="L">r</span></p>
+ <p id="Ss19-8" class="key--letter hidden"><span class="U">S</span> <span class="L">s</span></p>
+ <p id="Tt20-7" class="key--letter hidden"><span class="U">T</span> <span class="L">t</span></p>
+ <p id="Uu21-6" class="key--letter hidden"><span class="U">U</span> <span class="L">u</span></p>
+ <p id="Vv22-5" class="key--letter hidden"><span class="U">V</span> <span class="L">v</span></p>
+ <p id="Ww23-4" class="key--letter hidden"><span class="U">W</span> <span class="L">w</span></p>
+ <p id="Xx24-3" class="key--letter hidden"><span class="U">X</span> <span class="L">x</span></p>
+ <p id="Yy25-2" class="key--letter hidden"><span class="U">Y</span> <span class="L">y</span></p>
+ <p id="Zz26-1" class="key--letter"><span class="U">Z</span> <span class="L">z</span></p>
+</div>
+
+
+
+
+
+  </div>
+
+ </section>
   <!-- description and reset button -->
+ <div id="description">
+  <p></p> <button class=".button--active"></button> 
+ </div>
 
  <!-- text and animation field -->
  <!-- animation with numbers overlay -->
@@ -22,7 +469,6 @@
  <!-- level indicator -->
  <!-- navigation -->
   <!-- descriptions -->
- 
-</body>
 <script src="./js/script.js" async defer></script>
+</body>
 </html>
