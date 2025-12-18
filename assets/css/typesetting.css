@@ -9,6 +9,18 @@
 /* #level{
  font-size: clamp(.7rem, 4vw, 5.3rem);
 } */
+
+.pangram-letter{
+ font-family: Helvetica;
+ font-size: clamp(.7rem, 4vw, 5.3rem);
+ color: #1E4BE0;
+ font-weight: bold;
+ mix-blend-mode: multiply;
+ opacity: 0;
+}
+.symbol{
+ opacity: 1;
+}
 .text{
  font-family: Helvetica;
  font-size: clamp(.5rem, 3vw, 2.3rem);

@@ -14,7 +14,7 @@ body,html{
  display: flex;
  justify-content: center;
  align-items: center;
- opacity: 1;
+ opacity: 0;
 }
 .hidden {
  opacity: 0;
@@ -70,6 +70,17 @@ body,html{
  margin-right: clamp(10px, 20px, 30px);
  margin-bottom: clamp(10px, 20px, 30px);
  margin-top: 0;
+}
+#pangrams{
+ margin-left: clamp(10px, 20px, 30px);
+ margin-right: clamp(10px, 20px, 30px);
+ margin-bottom: clamp(10px, 20px, 30px);
+ margin-top: 25vh;
+ display: flex;
+ align-items: center;
+}
+#pangram-1{
+
 }
 #menu-about{
  margin-left: clamp(10px, 20px, 30px);
