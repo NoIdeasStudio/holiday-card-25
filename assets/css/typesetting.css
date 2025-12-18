@@ -5,6 +5,9 @@
  font-weight: bold;
  mix-blend-mode: multiply;
 }
+.end{
+ font-size: clamp(1.3rem, 6vw, 8rem);
+}
 
 /* #level{
  font-size: clamp(.7rem, 4vw, 5.3rem);
@@ -43,5 +46,6 @@
 }
 em{
  color: #8E7700;
+ font-family: arial;
 }
 

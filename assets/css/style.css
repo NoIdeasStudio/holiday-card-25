@@ -14,7 +14,7 @@ body,html{
  display: flex;
  justify-content: center;
  align-items: center;
- opacity: 0;
+ opacity: 1;
 }
 .hidden {
  opacity: 0;
@@ -27,6 +27,7 @@ body,html{
 .key--number{
  font-family: Arial;
  position: absolute;
+ color: #3C2570;
  top: 0;
  left: 0;
  width: 100%;
@@ -48,6 +49,12 @@ body,html{
   width: 100%;         
   height: clamp(.7rem, 4vw, 5.3rem);
 }
+.key--letter-number.end-ln{
+ position: relative;  
+  display: block;
+  width: 100%;         
+  height: clamp(1.3rem, 6vw, 8rem);
+}
 .key--row{
  display: flex;
  gap: .5em;
@@ -60,6 +67,12 @@ body,html{
  padding-top: clamp(0.05em, 2vw, .4em);
 }
 #key{
+ margin-left: clamp(10px, 20px, 30px);
+ margin-right: clamp(10px, 20px, 30px);
+ margin-bottom: clamp(5px, 10px, 15px);
+ margin-top: clamp(10px, 20px, 30px);
+}
+#end{
  margin-left: clamp(10px, 20px, 30px);
  margin-right: clamp(10px, 20px, 30px);
  margin-bottom: clamp(5px, 10px, 15px);
