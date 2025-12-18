@@ -18,13 +18,16 @@
 }
 .menu{
  font-family: Helvetica;
- font-size: clamp(.5rem, 3vw, 2.3rem);
+ font-size: clamp(.7rem, 2vw, 2.3rem);
  color: #1E4BE0;
  font-weight: bold;
  mix-blend-mode: multiply;
 }
-#level--text-number{
+#level{
  font-size: clamp(.8rem, 4vw, 6.3rem);
+}
+#level-number--active{
+ color: #3C2570;
 }
 em{
  color: #8E7700;
