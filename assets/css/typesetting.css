@@ -6,3 +6,27 @@
  mix-blend-mode: multiply;
 }
 
+/* #level{
+ font-size: clamp(.7rem, 4vw, 5.3rem);
+} */
+.text{
+ font-family: Helvetica;
+ font-size: clamp(.5rem, 3vw, 2.3rem);
+ color: #B5B5B5;
+ font-weight: bold;
+ mix-blend-mode: multiply;
+}
+.menu{
+ font-family: Helvetica;
+ font-size: clamp(.5rem, 3vw, 2.3rem);
+ color: #1E4BE0;
+ font-weight: bold;
+ mix-blend-mode: multiply;
+}
+#level--text-number{
+ font-size: clamp(.8rem, 4vw, 6.3rem);
+}
+em{
+ color: #8E7700;
+}
+

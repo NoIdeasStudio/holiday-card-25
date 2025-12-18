@@ -41,14 +41,14 @@ body,html{
  color: #3C2570;
 }
 
-/* key container and row */
+/* containers */
 .key--letter-number{
  position: relative;  
   display: block;
   width: 100%;         
   height: clamp(.7rem, 4vw, 5.3rem);
 }
-.key--row-1{
+.key--row{
  display: flex;
  gap: .5em;
  height: fit-content;
@@ -56,48 +56,16 @@ body,html{
  width: 100%;
  position: relative;
 }
-.key--row-1:nth-of-type(2) {
- padding-top: clamp(0.1em, 2vw, .7em);
+.key--row:nth-of-type(2) {
+ padding-top: clamp(0.05em, 2vw, .4em);
 }
-
-#key{
- margin: 1em;
+#key,
+#menu-about,
+#descriptive-text{
+ margin: clamp(10px, 20px, 30px);
 }
-
-
-
-/* all text in helvetica */
-.blue-text{
- font-family: Helvetica;
- font-weight: bold;
- color: #1E4BE0;
- mix-blend-mode: multiply;
- font-size: 3em;
-}
-
-
-
-.gold-text{
- font-family: Helvetica;
- font-weight: bold;
- color: #8E7700;
- mix-blend-mode: multiply;
- font-size: 3em;
-}
-.grey-gold-text{
- font-family: Helvetica;
- font-weight: bold;
- color: #B5B5B5;
- mix-blend-mode: multiply;
- font-size: 3em;
-}
-.grey-gold-text--active{
- color: #8E7700;
-}
-button{
- 
- mix-blend-mode: multiply;
- font-size: 3em;
-
- color: #8E7700;
+#menu{
+ display: flex;
+ justify-content: space-between;
+ text-align: center;
 }
