@@ -6,7 +6,7 @@
  mix-blend-mode: multiply;
 }
 .end{
- font-size: clamp(1rem, 5.8vw, 6.5rem);
+ font-size: clamp(1rem, 5.8vw, 8rem);
 }
 
 /* #level{

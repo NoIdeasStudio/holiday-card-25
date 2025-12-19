@@ -54,7 +54,7 @@ body,html{
  position: relative;  
   display: block;
   width: 100%;         
-  height: clamp(1.1rem, 5.8vw, 7rem);
+  height: clamp(1.1rem, 5.8vw, 8rem);
 }
 .key--letter-number.key--letter.selected.end.end-symbol,
 .key--letter-number.key--letter.selected.end.end-symbol-left{
