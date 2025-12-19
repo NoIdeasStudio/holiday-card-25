@@ -54,11 +54,14 @@ body,html{
  position: relative;  
   display: block;
   width: 100%;         
-  height: clamp(1.3rem, 6vw, 8rem);
+  height: clamp(1.1rem, 5.8vw, 7rem);
 }
 .key--letter-number.key--letter.selected.end.end-symbol,
 .key--letter-number.key--letter.selected.end.end-symbol-left{
   width: 10%;         
+}
+.key--letter-number.key--letter.selected.end.end-symbol-space{
+ width: 80%;         
 }
 .end-symbol{
  text-align: center;
@@ -86,8 +89,8 @@ body,html{
 #end{
  margin-left: clamp(10px, 20px, 30px);
  margin-right: clamp(10px, 20px, 30px);
- margin-bottom: clamp(5px, 10px, 15px);
- margin-top: clamp(10px, 20px, 30px);
+ margin-bottom: 0;
+ margin-top: clamp(5px, 5px, 10px);
 }
 #descriptive-text{
  margin-left: clamp(10px, 20px, 30px);
@@ -109,7 +112,7 @@ body,html{
 #menu-about{
  margin-left: clamp(10px, 20px, 30px);
  margin-right: clamp(10px, 20px, 30px);
- margin-bottom: clamp(10px, 20px, 30px);
+ margin-bottom: clamp(5px, 10px, 15px);
  margin-top: 0;
  position: fixed;
  bottom: 0;
@@ -128,12 +131,13 @@ body,html{
 }
 .menu--about{
 text-align: left;
+grid-column: 1/2;
 }
 .menu--home{
  text-align: center;
-
+ grid-column: 2/3;
 }
 .menu--link{
  text-align: end;
-
+ grid-column: 3/4;
 }

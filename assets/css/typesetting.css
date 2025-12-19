@@ -6,7 +6,7 @@
  mix-blend-mode: multiply;
 }
 .end{
- font-size: clamp(1.3rem, 6vw, 8rem);
+ font-size: clamp(1rem, 5.8vw, 6.5rem);
 }
 
 /* #level{
@@ -39,7 +39,7 @@
  mix-blend-mode: multiply;
 }
 #level{
- font-size: clamp(.8rem, 4vw, 6.3rem);
+ font-size: clamp(.8rem, 4vw, 7rem);
 }
 #level-number--active{
  color: #3C2570;
