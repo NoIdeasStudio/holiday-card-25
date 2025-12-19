@@ -19,9 +19,10 @@ body,html{
 .hidden {
  opacity: 0;
 }
-.key--letter--active{
+.selected{
  color: #1E4BE0;
 }
+
 
 /* key number */
 .key--number{
@@ -54,6 +55,16 @@ body,html{
   display: block;
   width: 100%;         
   height: clamp(1.3rem, 6vw, 8rem);
+}
+.key--letter-number.key--letter.selected.end.end-symbol,
+.key--letter-number.key--letter.selected.end.end-symbol-left{
+  width: 10%;         
+}
+.end-symbol{
+ text-align: center;
+}
+.end-symbol-left{
+ text-align: left;
 }
 .key--row{
  display: flex;
