@@ -33,13 +33,17 @@
 }
 .menu{
  font-family: Helvetica;
- font-size: clamp(.7rem, 2vw, 2.3rem);
+ font-size: clamp(.3rem, 3vw, 2rem);
  color: #1E4BE0;
  font-weight: bold;
  mix-blend-mode: multiply;
 }
 #level{
  font-size: clamp(.8rem, 4vw, 7rem);
+ opacity: 0;
+}
+.unfinished{
+ color: #B5B5B5;
 }
 #level-number--active{
  color: #3C2570;
