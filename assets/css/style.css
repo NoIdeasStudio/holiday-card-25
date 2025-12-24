@@ -1,6 +1,9 @@
 body,html{
  background-color: #F9F9F9;
 }
+body{
+ overscroll-behavior: none;
+}
 
 /* key letter */
 .key--letters{
