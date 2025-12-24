@@ -121,6 +121,9 @@ body,html{
 #start{
  cursor: pointer;
 }
+#reset{
+ opacity: 0;
+}
 
 /* pangrams */
 #pangrams{
@@ -130,7 +133,7 @@ body,html{
  margin-top: clamp(20vh, 14vh, 12vh);
  align-items: flex-start;
  position: fixed;
- top: 20vh;
+ top: 24vh;
  display: flex;
  flex-direction: column-reverse;
 }
@@ -152,13 +155,21 @@ span.word-spacing{
 }
 
 /* menu */
-#menu-about{
- margin-left: clamp(10px, 20px, 30px);
- margin-right: clamp(10px, 20px, 30px);
- margin-bottom: clamp(5px, 10px, 15px);
- margin-top: 0;
+#menu-about {
  position: fixed;
  bottom: 0;
+ left: 0;
+ width: 100vw; /* span the full viewport width */
+ box-sizing: border-box; /* ensures padding doesn't make it overflow */
+ padding-left: clamp(10px, 20px, 30px); 
+ padding-right: clamp(10px, 20px, 30px);
+ margin-bottom: clamp(5px, 10px, 15px);
+}
+
+#about{
+ display: none;
+ cursor: pointer;
+ margin-bottom: clamp(5px, 10px, 15px);
 }
 .level{
  margin-left: clamp(10px, 20px, 30px);
@@ -170,17 +181,20 @@ span.word-spacing{
 #menu{
  grid-template-columns: repeat(3, 1fr);
  display: grid;
- margin-bottom: clamp(5px, 10px, 15px);
+ margin-bottom: clamp(3px, 8px, 10px);
 }
 .menu--about{
 text-align: left;
 grid-column: 1/2;
+cursor: pointer;
 }
 .menu--home{
  text-align: center;
  grid-column: 2/3;
+ cursor: pointer;
 }
 .menu--link{
  text-align: end;
  grid-column: 3/4;
+ cursor: pointer;
 }

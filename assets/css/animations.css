@@ -58,3 +58,23 @@
  to { opacity: 0; } 
 }
 
+@media (max-width: 700px) {
+ #key,
+ #pangrams,
+ .level,
+ #descriptive-text {
+   display: none !important;
+ }
+
+ #end { /* create a new div with just # */
+   display: block;
+   text-align: center;
+   font-size: 2rem;
+ }
+}
+
+@media (min-width: 701px) {
+ #end {
+   display: none;
+ }
+}
