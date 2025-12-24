@@ -340,32 +340,48 @@ document.getElementById('reset')?.addEventListener('click', () => {
 
 
 function animateLetters(container) {
+  if (!container || container.dataset.animating === 'true') return;
+
+  container.dataset.animating = 'true';
+
   const letters = container.querySelectorAll('.key--letter');
+
   letters.forEach((letter, i) => {
     letter.style.animationDelay = `${i * 0.12}s`;
     letter.classList.add(i === letters.length - 1 ? 'hold' : 'fade');
+
     letter.addEventListener(
       'animationend',
-      () => letter.classList.remove('fade', 'hold'),
+      () => {
+        letter.classList.remove('fade', 'hold');
+        container.dataset.animating = 'false';
+      },
       { once: true }
     );
   });
 }
 
-// MOBILE
-keyContainers.forEach(container => {
-  container.addEventListener('mouseover', () => {
-    if (!introDone) return;
-    animateLetters(container);
-  });
-});
 
-keyContainers.forEach(container => {
-  container.addEventListener('touchmove', e => {
-    e.preventDefault();
+// MOBILE
+document.addEventListener(
+  'touchmove',
+  e => {
+    if (!introDone) return;
+
+    const touch = e.touches[0];
+    if (!touch) return;
+
+    const el = document.elementFromPoint(touch.clientX, touch.clientY);
+    if (!el) return;
+
+    const container = el.closest('.key--letter-number');
+    if (!container) return;
+
     animateLetters(container);
-  });
-});
+  },
+  { passive: false }
+);
+
 
 // ABOUT
 document.querySelector('.menu--about')?.addEventListener('click', () => {
