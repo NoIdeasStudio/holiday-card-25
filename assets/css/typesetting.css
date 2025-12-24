@@ -1,17 +1,12 @@
 .key--letter,
 .key--number {
  font-size: clamp(.7rem, 4vw, 5.3rem);
- color: #B5B5B5;
  font-weight: bold;
  mix-blend-mode: multiply;
 }
 .end{
  font-size: clamp(1rem, 5.8vw, 8rem);
 }
-
-/* #level{
- font-size: clamp(.7rem, 4vw, 5.3rem);
-} */
 
 .pangram-letter{
  font-family: Helvetica;
@@ -31,6 +26,9 @@
  font-weight: bold;
  mix-blend-mode: multiply;
 }
+.grey{
+ color: #B5B5B5;
+}
 .menu{
  font-family: Helvetica;
  font-size: clamp(.3rem, 3vw, 2rem);
@@ -38,15 +36,15 @@
  font-weight: bold;
  mix-blend-mode: multiply;
 }
-#level{
- font-size: clamp(.8rem, 4vw, 7rem);
- opacity: 0;
+.level{
+ font-family: Helvetica;
+ font-size: clamp(1.2rem, 5vw, 8rem);
+ color: #B5B5B5;
+ font-weight: bold;
+ mix-blend-mode: multiply;
 }
 .unfinished{
  color: #B5B5B5;
-}
-#level-number--active{
- color: #3C2570;
 }
 em{
  color: #8E7700;

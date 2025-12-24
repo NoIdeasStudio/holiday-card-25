@@ -15,10 +15,12 @@ body,html{
  justify-content: center;
  align-items: center;
  opacity: 1;
+ color: #B5B5B5;
 }
 .hidden {
  opacity: 0;
 }
+
 .selected{
  color: #1E4BE0;
 }
@@ -38,8 +40,7 @@ body,html{
  align-items: center;
  z-index: 1;
 }
-.key--number:hover,
-.key--number--active{
+.key--number:hover{
  color: #3C2570;
 }
 
@@ -75,11 +76,15 @@ body,html{
 }
 
 /* end screen */
+.hide {
+ display: none;
+}
 #end{
  margin-left: clamp(10px, 20px, 30px);
  margin-right: clamp(10px, 20px, 30px);
  margin-bottom: 0;
  margin-top: clamp(5px, 5px, 10px);
+ display: none;
 }
 .key--letter-number.end-ln{
  position: relative;  
@@ -107,6 +112,8 @@ body,html{
  margin-right: clamp(10px, 20px, 30px);
  margin-bottom: clamp(10px, 20px, 30px);
  margin-top: 0;
+ display: flex;
+ justify-content: space-between;
 }
 .directions{
  width: 70vw;
@@ -122,6 +129,8 @@ body,html{
  margin-bottom: clamp(10px, 20px, 30px);
  margin-top: clamp(20vh, 14vh, 12vh);
  align-items: flex-start;
+ position: fixed;
+ top: 20vh;
  display: flex;
  flex-direction: column-reverse;
 }
@@ -138,6 +147,9 @@ span.word-spacing{
  width: 100%;
  opacity: 0;
 }
+.hidden-letter {
+ opacity: 0;
+}
 
 /* menu */
 #menu-about{
@@ -148,7 +160,7 @@ span.word-spacing{
  position: fixed;
  bottom: 0;
 }
-#level{
+.level{
  margin-left: clamp(10px, 20px, 30px);
  margin-right: clamp(10px, 20px, 30px);
  margin-bottom: 0;
