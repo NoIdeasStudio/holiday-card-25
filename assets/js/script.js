@@ -4,6 +4,8 @@ let startEnabled = false;
 let step = 0;
 let level = 1;
 let flashing = false;
+let lastAnimatedLetter = null;
+
 
 // KEY CONSTANTS
 const KO = {};
@@ -175,8 +177,9 @@ document.addEventListener('keydown', e => {
 
     if (TO[toKey]) TO[toKey].style.opacity = '1';
     if (KO[koKey]) KO[koKey].classList.remove('hidden-letter');
-    if (KOS[kosKey]) KOS[kosKey].classList.add('selected');
+    if (KOS[kosKey]) KOS[kosKey].classList.add('selected');lastAnimatedLetter = KO[koKey];
     if (KON[konKey]) KON[konKey].style.color = '#3C2570';
+    
 
     step++;
 
@@ -185,7 +188,7 @@ document.addEventListener('keydown', e => {
     moveCursorToLetter(nextLetter);
 
     if (step <= 26) highlightNext(null, `KON_${step}${suffix}`);
-    else advanceLevel(); 
+    else advanceLevel();
   } else {
     flashLightbox();
   }
@@ -204,16 +207,24 @@ function advanceLevel() {
     level++;
     step = 1;
 
-    if (level > 3) {
-      endGame();
+    if (level === 4) {
+      // allow final key state to render, then end game
+      requestAnimationFrame(() => {
+        endGame();
+      });
       return;
     }
+    
+    
 
+    // normal level advance (1 → 2, 2 → 3)
     levelText.style.color = '#B5B5B5';
     levelNumber.style.color = '#B5B5B5';
     levelNumber.textContent = level;
 
-    document.getElementById(`pangram-${level}`)?.style.setProperty('display','block');
+    document
+      .getElementById(`pangram-${level}`)
+      ?.style.setProperty('display', 'block');
 
     ['', '_2', '_3'].forEach(suffix => resetKOSLevel(suffix));
 
@@ -222,12 +233,15 @@ function advanceLevel() {
     resetNumbers(suffix);
 
     for (let i = 1; i <= 26; i++) {
-      if (TO[`TO_${i}${suffix}`]) TO[`TO_${i}${suffix}`].style.opacity = '0';
+      if (TO[`TO_${i}${suffix}`]) {
+        TO[`TO_${i}${suffix}`].style.opacity = '0';
+      }
     }
 
     highlightNext(null, `KON_1${suffix}`);
   }, 1000);
 }
+
 
 function endGame() {
   const fadeOutEls = [
