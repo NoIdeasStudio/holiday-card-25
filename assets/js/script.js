@@ -20,24 +20,48 @@ for (let i = 1; i <= 26; i++) {
   KOS[`KOS_${i}`]   = document.querySelector(`.KOS-${i}`);
   KOS[`KOS_${i}_2`] = document.querySelector(`.KOS-${i}-2`);
   KOS[`KOS_${i}_3`] = document.querySelector(`.KOS-${i}-3`);
-
   // Type Order
   TO[`TO_${i}`]   = document.querySelector(`.TO-${i}`);
   TO[`TO_${i}_2`] = document.querySelector(`.TO-${i}-2`);
   TO[`TO_${i}_3`] = document.querySelector(`.TO-${i}-3`);
-
   // Key Order Number
   KON[`KON_${i}`]   = document.querySelector(`.KO-N-${i}`);
   KON[`KON_${i}_2`] = document.querySelector(`.KO-N-${i}-2`);
   KON[`KON_${i}_3`] = document.querySelector(`.KO-N-${i}-3`);
 }
 
+// CURSOR SETUP
+const cursor = document.createElement('div');
+cursor.classList.add('cursor');
+document.getElementById('pangrams').appendChild(cursor);
+
+let currentLetter = null;
+
+function moveCursorToLetter(letterSpan) {
+  if (!letterSpan) return;
+
+  currentLetter = letterSpan;
+
+  const container = document.getElementById('pangrams');
+
+  const offsetLeft = letterSpan.offsetLeft;
+  const offsetTop = letterSpan.offsetTop;
+
+  cursor.style.left = `${offsetLeft}px`;
+  cursor.style.top = `${offsetTop}px`;
+  cursor.style.height = '1lh';
+}
+
+window.addEventListener('resize', () => {
+  if (currentLetter) moveCursorToLetter(currentLetter);
+});
+
+
 // SELECTORS
 function resetNumbers(suffix = '') {
   for (let i = 1; i <= 26; i++) {
     const ko = KO[`KO_${i}${suffix}`];
     const kon = KON[`KON_${i}${suffix}`];
-
     if (ko) ko.style.color = '#B5B5B5';
     if (kon) {
       kon.style.opacity = '1';
@@ -56,9 +80,10 @@ function resetKOSLevel(suffix = '') {
 
 function highlightNext(koKey, konKey) {
   if (KO[koKey]) KO[koKey].style.color = '#3C2570';
-  if (KON[konKey]) {
-    KON[konKey].style.color = '#3C2570';
-    KON[konKey].querySelectorAll('em').forEach(em => em.style.color = '#3C2570');
+  if (konKey && KON[konKey]) {
+    KON[konKey].style.color = '#8E7700';
+    KON[konKey].querySelectorAll('em').forEach(em => em.style.color = '#8E7700');
+    moveCursorToLetter(TO[`TO_${step}${sequences[level].suffix}`]);
   }
 }
 
@@ -72,10 +97,8 @@ function resetLetters(suffix = '') {
 
 // INTRO HOVER ANIMATION
 const keyContainers = document.querySelectorAll('.key--letter-number');
-
 keyContainers.forEach(container => {
   const letters = container.querySelectorAll('.key--letter');
-
   function animate() {
     letters.forEach((letter, i) => {
       letter.style.animationDelay = `${i * 0.12}s`;
@@ -89,9 +112,7 @@ keyContainers.forEach(container => {
     introDone = true;
     startEnabled = true;
   }
-
   animate();
-
   container.addEventListener('mouseover', () => {
     if (!introDone) return;
     animate();
@@ -101,57 +122,34 @@ keyContainers.forEach(container => {
 // START BUTTON
 document.getElementById('start')?.addEventListener('click', () => {
   if (!startEnabled) return;
-
   step = 1;
   level = 1;
-
   document.querySelector('.level')?.classList.remove('hidden');
   ['', '_2', '_3'].forEach(suffix => resetKOSLevel(suffix));
   resetLetters();
   resetNumbers();
-  for (let i = 1; i <= 26; i++) {
-    if (TO[`TO_${i}`]) TO[`TO_${i}`].style.opacity = '0';
-  }
-
+  for (let i = 1; i <= 26; i++) if (TO[`TO_${i}`]) TO[`TO_${i}`].style.opacity = '0';
   highlightNext(null, `KON_1`);
-  const desc = document.querySelector('#descriptive-text .directions');
-  if (desc) desc.innerHTML = "Look at the number above and type the corresponding letter.";
-  const resetBtn = document.getElementById('reset');
-  if (resetBtn) resetBtn.style.opacity = '1';
-  
-
 });
-
 
 // KEY SEQUENCES
 const keySequence1 = [
-  { key: 'b' }, { key: 'l' }, { key: 'o' }, { key: 'w' },
-  { key: 'z' }, { key: 'y' }, { key: 'n' }, { key: 'i' },
-  { key: 'g' }, { key: 'h' }, { key: 't' }, { key: 'f' },
-  { key: 'r' }, { key: 'u' }, { key: 'm' }, { key: 'p' },
-  { key: 's' }, { key: 'v' }, { key: 'e' }, { key: 'x' },
-  { key: 'd' }, { key: 'j' }, { key: 'a' }, { key: 'c' },
-  { key: 'k' }, { key: 'q' }
+  { key: 'b' }, { key: 'l' }, { key: 'o' }, { key: 'w' }, { key: 'z' }, { key: 'y' }, { key: 'n' },
+  { key: 'i' }, { key: 'g' }, { key: 'h' }, { key: 't' }, { key: 'f' }, { key: 'r' }, { key: 'u' },
+  { key: 'm' }, { key: 'p' }, { key: 's' }, { key: 'v' }, { key: 'e' }, { key: 'x' }, { key: 'd' },
+  { key: 'j' }, { key: 'a' }, { key: 'c' }, { key: 'k' }, { key: 'q' }
 ];
-
 const keySequence2 = [
-  { key: 'c' }, { key: 'w' }, { key: 'm' }, { key: 'f' },
-  { key: 'j' }, { key: 'o' }, { key: 'r' }, { key: 'd' },
-  { key: 'b' }, { key: 'a' }, { key: 'n' }, { key: 'k' },
-  { key: 'g' }, { key: 'l' }, { key: 'y' }, { key: 'p' },
-  { key: 'h' }, { key: 's' }, { key: 'v' }, { key: 'e' },
-  { key: 'x' }, { key: 't' }, { key: 'q' }, { key: 'u' },
-  { key: 'i' }, { key: 'z' }
+  { key: 'c' }, { key: 'w' }, { key: 'm' }, { key: 'f' }, { key: 'j' }, { key: 'o' }, { key: 'r' },
+  { key: 'd' }, { key: 'b' }, { key: 'a' }, { key: 'n' }, { key: 'k' }, { key: 'g' }, { key: 'l' },
+  { key: 'y' }, { key: 'p' }, { key: 'h' }, { key: 's' }, { key: 'v' }, { key: 'e' }, { key: 'x' },
+  { key: 't' }, { key: 'q' }, { key: 'u' }, { key: 'i' }, { key: 'z' }
 ];
-
 const keySequence3 = [
-  { key: 'm' }, { key: 'r' }, { key: 'j' }, { key: 'o' },
-  { key: 'c' }, { key: 'k' }, { key: 't' }, { key: 'v' },
-  { key: 'q' }, { key: 'u' }, { key: 'i' }, { key: 'z' },
-  { key: 'p' }, { key: 'h' }, { key: 'd' }, { key: 'b' },
-  { key: 'a' }, { key: 'g' }, { key: 's' }, { key: 'f' },
-  { key: 'e' }, { key: 'w' }, { key: 'l' }, { key: 'y' },
-  { key: 'n' }, { key: 'x' }
+  { key: 'm' }, { key: 'r' }, { key: 'j' }, { key: 'o' }, { key: 'c' }, { key: 'k' }, { key: 't' },
+  { key: 'v' }, { key: 'q' }, { key: 'u' }, { key: 'i' }, { key: 'z' }, { key: 'p' }, { key: 'h' },
+  { key: 'd' }, { key: 'b' }, { key: 'a' }, { key: 'g' }, { key: 's' }, { key: 'f' }, { key: 'e' },
+  { key: 'w' }, { key: 'l' }, { key: 'y' }, { key: 'n' }, { key: 'x' }
 ];
 
 const sequences = {
@@ -160,15 +158,12 @@ const sequences = {
   3: { keys: keySequence3, suffix: '_3' }
 };
 
-// KEYDOWN FUNTIONS
+// KEYDOWN FUNCTIONS
 document.addEventListener('keydown', e => {
   if (!startEnabled) return;
-
   const seq = sequences[level];
   if (!seq) return;
-
   const stepData = seq.keys[step - 1];
-
   if (!stepData) return;
 
   if (e.key.toLowerCase() === stepData.key) {
@@ -184,6 +179,10 @@ document.addEventListener('keydown', e => {
     if (KON[konKey]) KON[konKey].style.color = '#3C2570';
 
     step++;
+
+    // Move cursor to next letter
+    const nextLetter = TO[`TO_${step}${suffix}`];
+    moveCursorToLetter(nextLetter);
 
     if (step <= 26) highlightNext(null, `KON_${step}${suffix}`);
     else advanceLevel(); 
