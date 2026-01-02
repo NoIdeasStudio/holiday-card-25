@@ -1,3 +1,5 @@
+// development and design by Anais Pyrczak at https://anaispyrczak.com/ :) for No Ideas Studio, Happy New Year!
+
 // Global
 let introDone = false;
 let startEnabled = false;
@@ -45,7 +47,6 @@ function moveCursorToLetter(letterSpan) {
   currentLetter = letterSpan;
 
   const container = document.getElementById('pangrams');
-
   const offsetLeft = letterSpan.offsetLeft;
   const offsetTop = letterSpan.offsetTop;
 
