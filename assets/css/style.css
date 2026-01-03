@@ -216,6 +216,7 @@ font-family: Arial;
   top: 0;
   left: 0;
   animation: caret 1.06s steps(1) infinite;
+  display: none;
 }
 
 @keyframes caret {

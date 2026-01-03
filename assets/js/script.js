@@ -125,6 +125,9 @@ keyContainers.forEach(container => {
 // START BUTTON
 document.getElementById('start')?.addEventListener('click', () => {
   if (!startEnabled) return;
+
+  cursor.style.display = 'block'; 
+
   step = 1;
   level = 1;
   document.querySelector('.level')?.classList.remove('hidden');
@@ -132,8 +135,10 @@ document.getElementById('start')?.addEventListener('click', () => {
   resetLetters();
   resetNumbers();
   for (let i = 1; i <= 26; i++) if (TO[`TO_${i}`]) TO[`TO_${i}`].style.opacity = '0';
+
   highlightNext(null, `KON_1`);
 });
+
 
 // KEY SEQUENCES
 const keySequence1 = [
@@ -184,12 +189,15 @@ document.addEventListener('keydown', e => {
 
     step++;
 
-    // Move cursor to next letter
-    const nextLetter = TO[`TO_${step}${suffix}`];
-    moveCursorToLetter(nextLetter);
-
-    if (step <= 26) highlightNext(null, `KON_${step}${suffix}`);
-    else advanceLevel();
+    if (step <= 26) {
+      const nextLetter = TO[`TO_${step}${suffix}`];
+      moveCursorToLetter(nextLetter);
+      highlightNext(null, `KON_${step}${suffix}`);
+    } else {
+      cursor.style.display = 'none';
+      advanceLevel();
+    }
+    
   } else {
     flashLightbox();
   }
@@ -209,16 +217,10 @@ function advanceLevel() {
     step = 1;
 
     if (level === 4) {
-      // allow final key state to render, then end game
-      requestAnimationFrame(() => {
-        endGame();
-      });
+      requestAnimationFrame(endGame);
       return;
     }
-    
-    
 
-    // normal level advance (1 → 2, 2 → 3)
     levelText.style.color = '#B5B5B5';
     levelNumber.style.color = '#B5B5B5';
     levelNumber.textContent = level;
@@ -227,9 +229,9 @@ function advanceLevel() {
       .getElementById(`pangram-${level}`)
       ?.style.setProperty('display', 'block');
 
-    ['', '_2', '_3'].forEach(suffix => resetKOSLevel(suffix));
-
     const suffix = sequences[level]?.suffix || '';
+
+    ['', '_2', '_3'].forEach(s => resetKOSLevel(s));
     resetLetters(suffix);
     resetNumbers(suffix);
 
@@ -239,9 +241,15 @@ function advanceLevel() {
       }
     }
 
+    requestAnimationFrame(() => {
+      cursor.style.display = 'block';
+      moveCursorToLetter(TO[`TO_1${suffix}`]);
+    });
+
     highlightNext(null, `KON_1${suffix}`);
   }, 1000);
 }
+
 
 
 function endGame() {
