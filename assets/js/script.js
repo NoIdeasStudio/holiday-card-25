@@ -366,20 +366,49 @@ function animateLetters(container) {
 
   container.dataset.animating = 'true';
 
-  const letters = container.querySelectorAll('.key--letter');
+  // All hidden letters
+  const hiddenLetters = Array.from(container.querySelectorAll('.key--letter.hidden'));
 
-  letters.forEach((letter, i) => {
-    letter.style.animationDelay = `${i * 0.12}s`;
-    letter.classList.add(i === letters.length - 1 ? 'hold' : 'fade');
+  // The "last" letter (non-hidden) that must appear at the end
+  const lastLetter = container.querySelector('.key--letter:not(.hidden)');
+
+  if (!lastLetter && hiddenLetters.length === 0) {
+    container.dataset.animating = 'false';
+    return;
+  }
+
+  // Shuffle hidden letters
+  for (let i = hiddenLetters.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [hiddenLetters[i], hiddenLetters[j]] = [hiddenLetters[j], hiddenLetters[i]];
+  }
+
+  // Combine shuffled hidden letters with last letter at the end
+  const lettersToAnimate = [...hiddenLetters, lastLetter].filter(Boolean);
+
+  lettersToAnimate.forEach((letter, i) => {
+    const randomDelay = Math.random() * 0.3; // optional extra randomness
+    letter.style.animationDelay = `${i * 0.12 + randomDelay}s`;
+
+    // Only the very last letter gets 'hold', all others use 'fade'
+    const isLast = i === lettersToAnimate.length - 1;
+    letter.classList.add(isLast ? 'hold' : 'fade');
 
     letter.addEventListener(
       'animationend',
       () => {
         letter.classList.remove('fade', 'hold');
-        container.dataset.animating = 'false';
+
+        // Reset animating only after the last letter finishes
+        if (isLast) container.dataset.animating = 'false';
       },
       { once: true }
     );
+
+    // Ensure last letter starts invisible if it wasn't hidden
+    if (isLast && !letter.classList.contains('hidden')) {
+      letter.style.opacity = '0';
+    }
   });
 }
 
