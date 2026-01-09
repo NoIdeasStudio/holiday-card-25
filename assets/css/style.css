@@ -127,9 +127,6 @@ body{
 #start{
  cursor: pointer;
 }
-#reset{
- opacity: 0;
-}
 
 /* pangrams */
 #pangrams{

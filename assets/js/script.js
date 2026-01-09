@@ -131,6 +131,7 @@ document.getElementById('start')?.addEventListener('click', () => {
   step = 1;
   level = 1;
   document.querySelector('.level')?.classList.remove('hidden');
+  document.querySelector('.reset')?.classList.remove('hidden');
   ['', '_2', '_3'].forEach(suffix => resetKOSLevel(suffix));
   resetLetters();
   resetNumbers();
